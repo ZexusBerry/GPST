@@ -17,3 +17,7 @@ local function GPST:GetAllPlayers()
     R3.Name
     end
 end
+
+local function GPST:GetExecutor()
+    identifyexecutor()
+end
