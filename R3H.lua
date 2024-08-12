@@ -1,22 +1,30 @@
 local GPST = {}
 
-local function GPST:GetPlaceId()
-    game.PlaceId
+function GPST:GetPlaceId()
+    return game.PlaceId
 end
 
-local function GPST:GetPlaceName()
-    game.PlaceId.Name
+function GPST:GetPlaceName()
+    return game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name
 end
 
-local function GPST:GetPlayerName()
-    game.Players.localPlayer
+function GPST:GetPlayerName()
+    return game.Players.LocalPlayer.Name
 end
 
-local function GPST:GetExecutor()
-    if identifyexecutor() then
-    identifyexecutor()
+function GPST:GetAllPlayers()
+    local players = {}
+    for _, player in ipairs(game.Players:GetPlayers()) do
+        table.insert(players, player.Name)
+    end
+    return players
+end
+
+function GPST:GetExecutor()
+    if identifyexecutor then
+        return identifyexecutor()
     else
-    print("UnCommon eXeCutor")
+        return "Unknown executor"
     end
 end
 
