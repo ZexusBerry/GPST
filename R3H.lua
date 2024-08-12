@@ -12,12 +12,12 @@ local function GPST:GetPlayerName()
     game.Players.localPlayer
 end
 
-local function GPST:GetAllPlayers()
-    for _, R3 in ipairs(game.Players:GetChildren()) do
-    R3.Name
+local function GPST:GetExecutor()
+    if identifyexecutor() then
+    identifyexecutor()
+    else
+    print("UnCommon eXeCutor")
     end
 end
 
-local function GPST:GetExecutor()
-    identifyexecutor()
-end
+return GPST
