@@ -1,23 +1,23 @@
 local GPST = {}
 
-local function GPST:GetPlaceId()
+local function GetPlaceId()
     game.PlaceId
 end
 
-local function GPST:GetPlaceName()
+local function GetPlaceName()
     game.PlaceId.Name
 end
 
-local function GPST:GetPlayerName()
+local function GetPlayerName()
     game.Players.localPlayer
 end
 
-local function GPST:GetAllPlayers()
+local function GetAllPlayers()
     for _, R3 in ipairs(game.Players:GetChildren()) do
     R3.Name
     end
 end
 
-local function GPST:GetExecutor()
+local function GetExecutor()
     identifyexecutor()
 end
