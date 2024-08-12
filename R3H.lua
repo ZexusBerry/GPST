@@ -1,7 +1,7 @@
 local GPST = {}
 
 function GPST:GetPlaceId()
-    return game.PlaceId
+ game.PlaceId
 end
 
 function GPST:GetPlaceName()
